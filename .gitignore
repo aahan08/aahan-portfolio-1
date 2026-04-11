@@ -1,0 +1,9 @@
+node_modules/
+.env
+client/.env
+client/node_modules/
+server/node_modules/
+dist/
+client/dist/
+*.log
+/.claude

@@ -1,0 +1,129 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: transparent;
+  transition: background 0.3s, border-bottom 0.3s;
+}
+
+.navbar--scrolled {
+  background: var(--surface-container-high);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--outline-variant);
+}
+
+.navbar__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar__logo {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--on-surface);
+  text-decoration: none;
+  letter-spacing: 0.05em;
+}
+
+.navbar__logo-bracket {
+  color: var(--primary);
+}
+
+.navbar__links {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.navbar__links a {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--on-surface-dim);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navbar__links a:hover,
+.navbar__links a.active {
+  color: var(--primary);
+}
+
+.navbar__links a.active {
+  position: relative;
+}
+
+.navbar__links a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--primary);
+}
+
+.navbar__right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.navbar__hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--on-surface);
+  transition: all 0.2s;
+}
+
+.navbar__hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.navbar__hamburger.open span:nth-child(2) { opacity: 0; }
+.navbar__hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+@media (max-width: 768px) {
+  .navbar__hamburger { display: flex; }
+
+  .navbar__links {
+    position: fixed;
+    top: 56px;
+    left: 0;
+    right: 0;
+    background: var(--surface-container-high);
+    backdrop-filter: blur(24px);
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1rem;
+    border-bottom: 1px solid var(--outline-variant);
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.3s, opacity 0.3s;
+  }
+
+  .navbar__links--open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all;
+  }
+}

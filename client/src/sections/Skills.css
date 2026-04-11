@@ -1,0 +1,48 @@
+.skills__groups {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.skills__group {
+  padding: 1.5rem;
+}
+
+.skills__group-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.skills__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 1.25rem;
+}
+
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: default;
+}
+
+.skill-item__pct {
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.skill-item__name {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--on-surface-dim);
+  text-align: center;
+  letter-spacing: 0.05em;
+  line-height: 1.3;
+}
+
+@media (max-width: 900px) {
+  .skills__groups { grid-template-columns: 1fr; }
+}

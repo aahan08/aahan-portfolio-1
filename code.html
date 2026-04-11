@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AAHAN | SYS_ARCH_v2.0</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=JetBrains+Mono:wght@400;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .circuit-bg {
+            background-image: radial-gradient(#3b4b37 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+        }
+        .glow-text {
+            text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+        }
+        .neumorphic-recessed {
+            background: #111318;
+            box-shadow: inset 6px 6px 12px #0a0b0e, inset -6px -6px 12px #181b22;
+        }
+        .neumorphic-raised {
+            background: #1a1c20;
+            box-shadow: 8px 8px 16px #0d0e11, -8px -8px 16px #272a2f;
+        }
+        .neumorphic-button {
+            background: #1a1c20;
+            box-shadow: 4px 4px 8px #0d0e11, -4px -4px 8px #272a2f;
+            transition: all 0.2s ease;
+        }
+        .neumorphic-button:active {
+            box-shadow: inset 4px 4px 8px #0d0e11, inset -4px -4px 8px #272a2f;
+            transform: scale(0.98);
+        }
+        .terminal-cursor {
+            border-right: 2px solid #00FF41;
+            animation: blink 0.7s step-end infinite;
+        }
+        @keyframes blink { 50% { border-color: transparent; } }
+        
+        @keyframes typewriter {
+            from { width: 0 }
+            to { width: 100% }
+        }
+        .typewriter-text {
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            animation: typewriter 3s steps(30, end) infinite alternate;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-container": "#00FF41",
+                      "surface": "#111318",
+                      "on-surface": "#e2e2e8",
+                      "outline-variant": "#3b4b37",
+                      "surface-container": "#1e2024",
+                      "on-surface-variant": "#b9ccb2"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.5rem",
+                      "xl": "1rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Space Grotesk"],
+                      "body": ["Inter"],
+                      "label": ["JetBrains Mono"]
+              }
+            },
+          }
+        }
+      </script>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-black circuit-bg min-h-screen">
+<!-- Top Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 bg-[#1a1c20]/95 border-b border-[#00FF41]/20 backdrop-blur-md">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-[1920px] mx-auto">
+<div class="text-xl font-black text-[#00FF41] font-mono uppercase tracking-tighter">
+            AAHAN
+        </div>
+<div class="hidden md:flex items-center space-x-8 font-label text-xs uppercase tracking-tighter">
+<a class="text-[#00FF41] font-bold" href="#hero">HOME</a>
+<a class="text-[#e2e2e8]/60 hover:text-[#00FF41] transition-colors" href="#about">BIO</a>
+<a class="text-[#e2e2e8]/60 hover:text-[#00FF41] transition-colors" href="#skills">SKILLS</a>
+<a class="text-[#e2e2e8]/60 hover:text-[#00FF41] transition-colors" href="#projects">PROJECTS</a>
+<a class="text-[#e2e2e8]/60 hover:text-[#00FF41] transition-colors" href="#contact">TERMINAL</a>
+</div>
+<div class="flex items-center space-x-4">
+<span class="text-[#00FF41] font-label text-[10px] hidden sm:inline">LINK_STATUS: STABLE</span>
+<span class="material-symbols-outlined text-[#00FF41] text-lg">memory</span>
+</div>
+</div>
+</nav>
+<main class="pt-24 px-4 md:px-8 max-w-7xl mx-auto space-y-32 pb-32">
+<!-- Hero Section -->
+<section class="min-h-[80vh] flex flex-col justify-center" id="hero">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 space-y-8">
+<div class="inline-block px-3 py-1 bg-primary-container/10 border border-primary-container/30 rounded-sm">
+<span class="font-label text-primary-container text-xs uppercase tracking-widest">Initialization Sequence Complete</span>
+</div>
+<h1 class="font-headline font-bold text-6xl md:text-8xl lg:text-9xl tracking-tight leading-none text-white">
+<span class="text-primary-container glow-text">AAHAN</span>
+</h1>
+<div class="font-label text-2xl md:text-3xl text-on-surface-variant h-12 flex items-center">
+<span class="typewriter-text terminal-cursor pr-2">Systems &amp; IoT Engineer</span>
+</div>
+<p class="max-w-xl text-on-surface/80 leading-relaxed text-lg">
+                    Architecting the bridge between silicon and software. Specializing in VLSI design, IoT ecosystems, and full-stack MERN development.
+                </p>
+<div class="flex flex-wrap gap-6 pt-4">
+<button class="neumorphic-button px-8 py-4 rounded-xl border border-primary-container/20 flex items-center gap-3">
+<span class="material-symbols-outlined text-primary-container">download</span>
+<span class="font-label text-sm font-bold uppercase text-primary-container">Fetch_CV.pdf</span>
+</button>
+<button class="neumorphic-button px-8 py-4 rounded-xl border border-outline-variant/50 flex items-center gap-3">
+<span class="material-symbols-outlined">description</span>
+<span class="font-label text-sm font-bold uppercase">Fetch_CV.docx</span>
+</button>
+</div>
+</div>
+<div class="lg:col-span-5 relative">
+<div class="absolute -inset-10 bg-primary-container/10 blur-[100px] rounded-full"></div>
+<div class="relative neumorphic-raised p-2 rounded-3xl border border-outline-variant/30">
+<img alt="AAHAN" class="rounded-2xl grayscale hover:grayscale-0 transition-all duration-700 aspect-square object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZpOYgfQ-BSI-Eb9jjwhsDSfe3wDEWmWyTwBEz0d4WlackcpOrLav1ltza1EruX5QT-Xws1bcQNCh7qER5BegTddtAJ0p2GhmKDV9-0E9cXSapy3I6bf-OmLh4yD31WNToYexhQQeCrGl0Tlc06Crts20pDAJ1slc8RpdO1HxfBgkI8VWI3C33pduikaJGQqJ-XGweJo01Dq9KVvNQ51NCbMa_sXe-Ba0DPwF0nnPRm2mZwpujMHKQZWP1azu1e3A1mACU7iinjAiM"/>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="space-y-12" id="about">
+<div class="flex items-center gap-4">
+<h2 class="font-headline font-bold text-3xl uppercase tracking-tighter">01. ABOUT_ME</h2>
+<div class="h-px flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-4">
+<div class="neumorphic-raised p-6 rounded-2xl border border-outline-variant/20 aspect-square flex flex-col items-center justify-center text-center space-y-4">
+<div class="w-32 h-32 rounded-full border-2 border-primary-container/50 p-1">
+<img alt="AAHAN" class="rounded-full w-full h-full object-cover grayscale" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZpOYgfQ-BSI-Eb9jjwhsDSfe3wDEWmWyTwBEz0d4WlackcpOrLav1ltza1EruX5QT-Xws1bcQNCh7qER5BegTddtAJ0p2GhmKDV9-0E9cXSapy3I6bf-OmLh4yD31WNToYexhQQeCrGl0Tlc06Crts20pDAJ1slc8RpdO1HxfBgkI8VWI3C33pduikaJGQqJ-XGweJo01Dq9KVvNQ51NCbMa_sXe-Ba0DPwF0nnPRm2mZwpujMHKQZWP1azu1e3A1mACU7iinjAiM"/>
+</div>
+<div>
+<p class="font-headline text-2xl font-bold">AAHAN</p>
+<p class="font-label text-xs text-primary-container">CORE_OPERATOR</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-8 flex flex-col justify-center space-y-8">
+<div class="neumorphic-recessed p-8 rounded-2xl border border-outline-variant/20">
+<p class="text-lg leading-relaxed text-on-surface/80">
+                        Hello! I am Aahan, a 2nd Year B.Tech student at JK Lakshmipat University, Rajasthan. I am passionate about bridging the gap between hardware and software. My work revolves around creating efficient IoT architectures and building scalable web applications using the MERN stack. I thrive at the intersection of VLSI design and high-performance computing.
+                    </p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+<div class="neumorphic-raised p-4 rounded-xl text-center">
+<p class="text-[10px] font-label text-on-surface-variant">LOCATION</p>
+<p class="font-bold text-sm">Rajasthan, India</p>
+</div>
+<div class="neumorphic-raised p-4 rounded-xl text-center">
+<p class="text-[10px] font-label text-on-surface-variant">LEVEL</p>
+<p class="font-bold text-sm">Sophomore (2nd Yr)</p>
+</div>
+<div class="neumorphic-raised p-4 rounded-xl text-center col-span-2 md:col-span-1">
+<p class="text-[10px] font-label text-on-surface-variant">STATUS</p>
+<p class="font-bold text-sm text-primary-container">ACTIVE_RESEARCH</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Skills Section -->
+<section class="space-y-12" id="skills">
+<div class="flex items-center gap-4">
+<h2 class="font-headline font-bold text-3xl uppercase tracking-tighter">02. SKILL_MATRIX</h2>
+<div class="h-px flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<!-- Frontend Cluster -->
+<div class="neumorphic-raised p-8 rounded-2xl space-y-8">
+<div class="flex items-center gap-2 border-b border-outline-variant/20 pb-4">
+<span class="material-symbols-outlined text-primary-container">terminal</span>
+<h3 class="font-label font-bold text-xs tracking-widest text-primary-container uppercase">Frontend_Core</h3>
+</div>
+<div class="flex flex-wrap justify-around gap-8">
+<div class="text-center">
+<div class="relative w-20 h-20 mb-3 flex items-center justify-center rounded-full neumorphic-recessed">
+<svg class="w-full h-full -rotate-90 absolute">
+<circle class="stroke-surface-container fill-none" cx="40" cy="40" r="32" stroke-width="4"></circle>
+<circle class="stroke-primary-container fill-none opacity-80" cx="40" cy="40" r="32" stroke-dasharray="201" stroke-dashoffset="20" stroke-width="4"></circle>
+</svg>
+<span class="font-label text-xs">90%</span>
+</div>
+<p class="font-label text-[10px] uppercase">React</p>
+</div>
+<div class="text-center">
+<div class="relative w-20 h-20 mb-3 flex items-center justify-center rounded-full neumorphic-recessed">
+<svg class="w-full h-full -rotate-90 absolute">
+<circle class="stroke-surface-container fill-none" cx="40" cy="40" r="32" stroke-width="4"></circle>
+<circle class="stroke-primary-container fill-none opacity-80" cx="40" cy="40" r="32" stroke-dasharray="201" stroke-dashoffset="40" stroke-width="4"></circle>
+</svg>
+<span class="font-label text-xs">80%</span>
+</div>
+<p class="font-label text-[10px] uppercase">Tailwind</p>
+</div>
+</div>
+</div>
+<!-- Backend Cluster -->
+<div class="neumorphic-raised p-8 rounded-2xl space-y-8">
+<div class="flex items-center gap-2 border-b border-outline-variant/20 pb-4">
+<span class="material-symbols-outlined text-primary-container">database</span>
+<h3 class="font-label font-bold text-xs tracking-widest text-primary-container uppercase">Backend_Matrix</h3>
+</div>
+<div class="flex flex-wrap justify-around gap-8">
+<div class="text-center">
+<div class="relative w-20 h-20 mb-3 flex items-center justify-center rounded-full neumorphic-recessed">
+<svg class="w-full h-full -rotate-90 absolute">
+<circle class="stroke-surface-container fill-none" cx="40" cy="40" r="32" stroke-width="4"></circle>
+<circle class="stroke-primary-container fill-none opacity-80" cx="40" cy="40" r="32" stroke-dasharray="201" stroke-dashoffset="30" stroke-width="4"></circle>
+</svg>
+<span class="font-label text-xs">85%</span>
+</div>
+<p class="font-label text-[10px] uppercase">Node.js</p>
+</div>
+<div class="text-center">
+<div class="relative w-20 h-20 mb-3 flex items-center justify-center rounded-full neumorphic-recessed">
+<svg class="w-full h-full -rotate-90 absolute">
+<circle class="stroke-surface-container fill-none" cx="40" cy="40" r="32" stroke-width="4"></circle>
+<circle class="stroke-primary-container fill-none opacity-80" cx="40" cy="40" r="32" stroke-dasharray="201" stroke-dashoffset="50" stroke-width="4"></circle>
+</svg>
+<span class="font-label text-xs">75%</span>
+</div>
+<p class="font-label text-[10px] uppercase">MongoDB</p>
+</div>
+</div>
+</div>
+<!-- Tools Cluster -->
+<div class="neumorphic-raised p-8 rounded-2xl space-y-8">
+<div class="flex items-center gap-2 border-b border-outline-variant/20 pb-4">
+<span class="material-symbols-outlined text-primary-container">settings_input_component</span>
+<h3 class="font-label font-bold text-xs tracking-widest text-primary-container uppercase">Tools_Eng</h3>
+</div>
+<div class="flex flex-wrap justify-around gap-8">
+<div class="text-center">
+<div class="relative w-20 h-20 mb-3 flex items-center justify-center rounded-full neumorphic-recessed">
+<svg class="w-full h-full -rotate-90 absolute">
+<circle class="stroke-surface-container fill-none" cx="40" cy="40" r="32" stroke-width="4"></circle>
+<circle class="stroke-primary-container fill-none opacity-80" cx="40" cy="40" r="32" stroke-dasharray="201" stroke-dashoffset="40" stroke-width="4"></circle>
+</svg>
+<span class="font-label text-xs">80%</span>
+</div>
+<p class="font-label text-[10px] uppercase">Docker/Git</p>
+</div>
+<div class="text-center">
+<div class="relative w-20 h-20 mb-3 flex items-center justify-center rounded-full neumorphic-recessed">
+<svg class="w-full h-full -rotate-90 absolute">
+<circle class="stroke-surface-container fill-none" cx="40" cy="40" r="32" stroke-width="4"></circle>
+<circle class="stroke-primary-container fill-none opacity-80" cx="40" cy="40" r="32" stroke-dasharray="201" stroke-dashoffset="60" stroke-width="4"></circle>
+</svg>
+<span class="font-label text-xs">70%</span>
+</div>
+<p class="font-label text-[10px] uppercase">Verilog</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Project Section -->
+<section class="space-y-12" id="projects">
+<div class="flex items-center gap-4">
+<h2 class="font-headline font-bold text-3xl uppercase tracking-tighter">03. REPO_LOG</h2>
+<div class="h-px flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Project 1 -->
+<div class="neumorphic-raised rounded-2xl overflow-hidden border border-outline-variant/20 flex flex-col group">
+<div class="h-48 relative overflow-hidden">
+<img alt="Smart Helmet" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIIg12phw3H3b1OL5McOGGKjJaR-18kHibwNaOiijELTIcS8mvbBdt1xY7tstgCgtuIoKybX7AYu6Q_50nH_EPbl2kYmJ2D2prgOANIi7jA_zQKPmpGlfMr3zA6kKvmRpp2OGkhpf3Yjm0NR3F38sXBLlJ2mjb-9uuw3QI-lWA83-625nrUoB9dTxmS1kSeiHafPZxKgGu7cFHpaS-gdQR94bmwG6GpkMErr0PVkLTqkbMHbD-5ow8SghpJ6NsEfB_wLwFqwY8M6Ml"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-all"></div>
+</div>
+<div class="p-6 space-y-4 flex-grow">
+<h3 class="font-headline text-xl font-bold text-white">Smart Helmet IoT</h3>
+<p class="text-sm text-on-surface/60">IoT based accident detection and safety analysis system using ESP32.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 bg-primary-container/10 text-[10px] font-label text-primary-container border border-primary-container/20 rounded">C++</span>
+<span class="px-2 py-0.5 bg-primary-container/10 text-[10px] font-label text-primary-container border border-primary-container/20 rounded">Firebase</span>
+</div>
+</div>
+<div class="p-6 pt-0 flex justify-between">
+<a class="text-xs font-label text-primary-container flex items-center gap-1 hover:underline" href="#">[GITHUB_REPO]</a>
+<a class="text-xs font-label text-on-surface-variant flex items-center gap-1 hover:text-white" href="#">LIVE_DEMO <span class="material-symbols-outlined text-xs">open_in_new</span></a>
+</div>
+</div>
+<!-- Project 2 -->
+<div class="neumorphic-raised rounded-2xl overflow-hidden border border-outline-variant/20 flex flex-col group">
+<div class="h-48 relative overflow-hidden">
+<img alt="BER Performance" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4TTxaLJpUo0tQqwjNrGDViyerP2nW3AeQe_FW3-XmA5D36CXStnMx38e5eGGT_yXQXpPAIYMf05WcC78eOl3mnq1JktxcOwRUGNiRh2LgKdbPg1vBqxSDtaQFWBKSQihXEZbOTh9Yhb-C3PP_NWnorPAu-HqISgLM6Kpr-EbvNDVaB25aNVOmbNZRSg7q57fPBw_uD63uMQR7VTyrbbqw8rL7JCCCLkGjmMvGrrU4lfDtZ-e1uJwn4a1TwpyjyTzaNQlPYaPEQzRa"/>
+</div>
+<div class="p-6 space-y-4 flex-grow">
+<h3 class="font-headline text-xl font-bold text-white">BER Signal Analysis</h3>
+<p class="text-sm text-on-surface/60">Bit Error Rate analysis in QAM/PSK modulation schemes using MATLAB.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 bg-primary-container/10 text-[10px] font-label text-primary-container border border-primary-container/20 rounded">MATLAB</span>
+<span class="px-2 py-0.5 bg-primary-container/10 text-[10px] font-label text-primary-container border border-primary-container/20 rounded">DSP</span>
+</div>
+</div>
+<div class="p-6 pt-0 flex justify-between">
+<a class="text-xs font-label text-primary-container flex items-center gap-1 hover:underline" href="#">[GITHUB_REPO]</a>
+<a class="text-xs font-label text-on-surface-variant flex items-center gap-1 hover:text-white" href="#">ANALYSIS_REPORT <span class="material-symbols-outlined text-xs">open_in_new</span></a>
+</div>
+</div>
+<!-- Project 3 -->
+<div class="neumorphic-raised rounded-2xl overflow-hidden border border-outline-variant/20 flex flex-col group">
+<div class="h-48 relative overflow-hidden">
+<img alt="VLSI Suite" class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrrDMslqgW7nksMijhz4_t68o8vBSMmAlAxIm2WYV2Nehm05Ee9y1fqu5QVjQCv-ECXda_JjrrY5YKCsTqNGwz-_Yl5RE-6C3F3jCHvz2w75XbTpy9JqbnlISuJdblwPoZxNZyPMUfZgnxmPvSjzb63891jjEW6WddEJ7ZN9lkiFt4UczAm_--5UatHEk_PnJpiZlqEpu_8DY-_KPbgm_Rjb67Ja3MES-807BPW2LO1xu0AyCyrYkGZc2UhOf2-vLaK3TiEbSbmKSr"/>
+</div>
+<div class="p-6 space-y-4 flex-grow">
+<h3 class="font-headline text-xl font-bold text-white">VLSI Logic Suite</h3>
+<p class="text-sm text-on-surface/60">Optimization of low-power CMOS logic gates and ALU architectures.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-2 py-0.5 bg-primary-container/10 text-[10px] font-label text-primary-container border border-primary-container/20 rounded">Verilog</span>
+<span class="px-2 py-0.5 bg-primary-container/10 text-[10px] font-label text-primary-container border border-primary-container/20 rounded">Cadence</span>
+</div>
+</div>
+<div class="p-6 pt-0 flex justify-between">
+<a class="text-xs font-label text-primary-container flex items-center gap-1 hover:underline" href="#">[GITHUB_REPO]</a>
+<a class="text-xs font-label text-on-surface-variant flex items-center gap-1 hover:text-white" href="#">SIM_RESULTS <span class="material-symbols-outlined text-xs">open_in_new</span></a>
+</div>
+</div>
+</div>
+</section>
+<!-- Education Timeline -->
+<section class="space-y-12" id="education">
+<div class="flex items-center gap-4">
+<h2 class="font-headline font-bold text-3xl uppercase tracking-tighter">04. SYSTEM_UPGRADES</h2>
+<div class="h-px flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="relative pl-12 border-l-2 border-primary-container/20 space-y-16 py-4">
+<div class="relative">
+<div class="absolute -left-[54px] top-0 w-10 h-10 rounded-full neumorphic-raised border border-primary-container/40 flex items-center justify-center bg-surface">
+<span class="material-symbols-outlined text-primary-container text-sm">school</span>
+</div>
+<div class="neumorphic-raised p-8 rounded-2xl border border-outline-variant/20 max-w-2xl transform transition hover:-translate-y-1">
+<span class="font-label text-[10px] text-primary-container font-bold px-2 py-1 bg-primary-container/10 rounded mb-4 inline-block">2023 - PRESENT</span>
+<h3 class="font-headline text-2xl font-bold">B.Tech in Electronics &amp; Communication</h3>
+<p class="font-label text-sm text-on-surface-variant">JK Lakshmipat University, Jaipur</p>
+<p class="mt-4 text-on-surface/70">Maintaining excellence with a 9.0+ CGPA. Specializing in high-performance computing and embedded systems.</p>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -left-[54px] top-0 w-10 h-10 rounded-full neumorphic-raised border border-outline-variant/40 flex items-center justify-center bg-surface">
+<span class="material-symbols-outlined text-on-surface-variant text-sm">history_edu</span>
+</div>
+<div class="neumorphic-raised p-8 rounded-2xl border border-outline-variant/20 max-w-2xl transform transition hover:-translate-y-1">
+<span class="font-label text-[10px] text-on-surface-variant font-bold px-2 py-1 bg-surface-container rounded mb-4 inline-block">2021 - 2023</span>
+<h3 class="font-headline text-2xl font-bold">Higher Secondary Education</h3>
+<p class="font-label text-sm text-on-surface-variant">Science &amp; Mathematics Concentration</p>
+<p class="mt-4 text-on-surface/70">Solid foundation in Physics and Computational Logic.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Certifications Section -->
+<section class="space-y-12" id="certifications">
+<div class="flex items-center gap-4">
+<h2 class="font-headline font-bold text-3xl uppercase tracking-tighter">05. CERT_STORAGE</h2>
+<div class="h-px flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="neumorphic-raised p-6 rounded-2xl border border-outline-variant/20 flex flex-col items-center text-center space-y-4">
+<span class="material-symbols-outlined text-primary-container text-4xl">verified</span>
+<div>
+<h4 class="font-bold text-sm uppercase">Google IoT Foundations</h4>
+<p class="text-[10px] font-label text-on-surface-variant">ID: GOOGLE-IOT-2023</p>
+</div>
+<button class="neumorphic-button px-4 py-2 rounded-lg text-[10px] font-label text-primary-container">VIEW_CERT</button>
+</div>
+<div class="neumorphic-raised p-6 rounded-2xl border border-outline-variant/20 flex flex-col items-center text-center space-y-4">
+<span class="material-symbols-outlined text-primary-container text-4xl">cloud_done</span>
+<div>
+<h4 class="font-bold text-sm uppercase">AWS Practitioner</h4>
+<p class="text-[10px] font-label text-on-surface-variant">ID: AWS-CCP-2024</p>
+</div>
+<button class="neumorphic-button px-4 py-2 rounded-lg text-[10px] font-label text-primary-container">VIEW_CERT</button>
+</div>
+<div class="neumorphic-raised p-6 rounded-2xl border border-outline-variant/20 flex flex-col items-center text-center space-y-4">
+<span class="material-symbols-outlined text-primary-container text-4xl">integration_instructions</span>
+<div>
+<h4 class="font-bold text-sm uppercase">MERN FullStack Dev</h4>
+<p class="text-[10px] font-label text-on-surface-variant">Coursera/Meta</p>
+</div>
+<button class="neumorphic-button px-4 py-2 rounded-lg text-[10px] font-label text-primary-container">VIEW_CERT</button>
+</div>
+<div class="neumorphic-raised p-6 rounded-2xl border border-outline-variant/20 flex flex-col items-center text-center space-y-4">
+<span class="material-symbols-outlined text-primary-container text-4xl">microchip</span>
+<div>
+<h4 class="font-bold text-sm uppercase">Verilog Hardware</h4>
+<p class="text-[10px] font-label text-on-surface-variant">JKLU Academic</p>
+</div>
+<button class="neumorphic-button px-4 py-2 rounded-lg text-[10px] font-label text-primary-container">VIEW_CERT</button>
+</div>
+</div>
+</section>
+<!-- Contact Form -->
+<section class="space-y-12" id="contact">
+<div class="flex items-center gap-4">
+<h2 class="font-headline font-bold text-3xl uppercase tracking-tighter">06. CONNECT_CLI</h2>
+<div class="h-px flex-grow bg-outline-variant/30"></div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+<div class="neumorphic-raised p-1 rounded-3xl">
+<div class="bg-surface p-8 rounded-[1.25rem] space-y-8">
+<div class="flex items-center justify-between border-b border-outline-variant/20 pb-4">
+<span class="font-label text-[10px] text-primary-container uppercase tracking-widest">Transmit_Data_Module_v1</span>
+<div class="flex gap-2">
+<div class="w-3 h-3 rounded-full bg-red-500/20"></div>
+<div class="w-3 h-3 rounded-full bg-amber-500/20"></div>
+<div class="w-3 h-3 rounded-full bg-green-500/20"></div>
+</div>
+</div>
+<form class="space-y-6">
+<div class="space-y-2">
+<label class="font-label text-[10px] text-on-surface-variant uppercase ml-1">Operator_ID (Name)</label>
+<input class="w-full neumorphic-recessed px-6 py-4 rounded-xl border-none focus:ring-1 focus:ring-primary-container/30 text-sm font-label text-on-surface placeholder:text-on-surface-variant/20" placeholder="IDENT_REQ..." type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-[10px] text-on-surface-variant uppercase ml-1">Return_Port (Email)</label>
+<input class="w-full neumorphic-recessed px-6 py-4 rounded-xl border-none focus:ring-1 focus:ring-primary-container/30 text-sm font-label text-on-surface placeholder:text-on-surface-variant/20" placeholder="ADDR_REQ..." type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label text-[10px] text-on-surface-variant uppercase ml-1">Packet_Payload (Message)</label>
+<textarea class="w-full neumorphic-recessed px-6 py-4 rounded-xl border-none focus:ring-1 focus:ring-primary-container/30 text-sm font-label text-on-surface placeholder:text-on-surface-variant/20 resize-none" placeholder="INITIATE_DATA_DUMP..." rows="4"></textarea>
+</div>
+<button class="w-full neumorphic-button py-5 rounded-xl flex items-center justify-center gap-3 group">
+<span class="material-symbols-outlined text-primary-container group-hover:rotate-12 transition-transform">send</span>
+<span class="font-label font-bold text-xs text-primary-container uppercase tracking-[0.2em]">Execute_Transmission</span>
+</button>
+</form>
+</div>
+</div>
+<div class="space-y-8">
+<div class="neumorphic-raised p-8 rounded-3xl border border-outline-variant/10 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4">
+<span class="material-symbols-outlined text-primary-container/20 text-6xl">sensors</span>
+</div>
+<h3 class="font-headline text-2xl font-bold mb-4">Direct Links</h3>
+<p class="text-on-surface/60 text-sm mb-8">Access alternative communication nodes for immediate synchronization.</p>
+<div class="space-y-4">
+<a class="neumorphic-button p-5 rounded-2xl flex items-center justify-between group border border-transparent hover:border-primary-container/20" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container">link</span>
+<span class="font-bold">LinkedIn_Port</span>
+</div>
+<span class="material-symbols-outlined text-xs">north_east</span>
+</a>
+<a class="neumorphic-button p-5 rounded-2xl flex items-center justify-between group border border-transparent hover:border-primary-container/20" href="#">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container">code</span>
+<span class="font-bold">GitHub_Root</span>
+</div>
+<span class="material-symbols-outlined text-xs">north_east</span>
+</a>
+<a class="neumorphic-button p-5 rounded-2xl flex items-center justify-between group border border-transparent hover:border-primary-container/20" href="mailto:aahan@example.com">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary-container">mail</span>
+<span class="font-bold">Email_Stream</span>
+</div>
+<span class="material-symbols-outlined text-xs">north_east</span>
+</a>
+</div>
+</div>
+<div class="neumorphic-recessed p-6 rounded-2xl border border-outline-variant/10">
+<h4 class="font-label text-[10px] font-bold text-primary-container mb-4 uppercase">SYSTEM_METRICS</h4>
+<div class="grid grid-cols-2 gap-4">
+<div class="text-[10px] font-mono text-on-surface-variant/60">
+                            LATENCY: 12ms<br/>
+                            CORE_TEMP: 38°C<br/>
+                            LOC: 26.91°N 75.78°E
+                        </div>
+<div class="text-[10px] font-mono text-on-surface-variant/60 text-right">
+                            AES_SEC: ACTIVE<br/>
+                            MERN_ENG: v14.2<br/>
+                            IOT_STK: MQTT_SSL
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-[#0C0E12] border-t border-primary-container/10 mt-32">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-6 py-12 max-w-[1920px] mx-auto gap-8">
+<div class="font-label text-[10px] text-on-surface-variant/40 uppercase tracking-widest text-center md:text-left">
+            © 2024 CORE_AAHAN_SYS<br/>
+            ARCHITECTED FOR PRECISION
+        </div>
+<div class="flex flex-wrap justify-center items-center gap-8 font-label text-[10px] uppercase">
+<a class="text-on-surface-variant/60 hover:text-primary-container transition-colors" href="#">GitHub</a>
+<a class="text-on-surface-variant/60 hover:text-primary-container transition-colors" href="#">LinkedIn</a>
+<a class="text-on-surface-variant/60 hover:text-primary-container transition-colors" href="#">Resume</a>
+<div class="flex items-center gap-2">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container animate-pulse shadow-[0_0_8px_#00FF41]"></div>
+<span class="text-primary-container font-bold">UPTIME: 99.99%</span>
+</div>
+</div>
+</div>
+</footer>
+<!-- Hardware Accents -->
+<div class="fixed top-24 left-4 w-1 h-8 bg-primary-container/10 rounded-full hidden lg:block"></div>
+<div class="fixed top-24 right-4 w-1 h-8 bg-primary-container/10 rounded-full hidden lg:block"></div>
+<div class="fixed bottom-4 left-4 flex gap-1">
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container/20"></div>
+<div class="w-1.5 h-1.5 rounded-full bg-primary-container/20"></div>
+</div>
+</body></html>

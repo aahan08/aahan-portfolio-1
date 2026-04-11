@@ -1,0 +1,27 @@
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--surface-lowest);
+  border: 1px solid var(--outline-variant);
+  border-radius: 2px;
+  padding: 4px 10px;
+  cursor: pointer;
+  transition: border-color 0.2s;
+  color: var(--on-surface-dim);
+}
+
+.theme-toggle:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+.theme-toggle__label {
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+}
+
+.theme-toggle__icon {
+  font-size: 1rem;
+  line-height: 1;
+}

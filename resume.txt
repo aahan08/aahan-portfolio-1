@@ -1,0 +1,66 @@
+AAHAN BANSAL
+Rajasthan, India • +91 XXXXX XXXXX • yourmail@gmail.com • GitHub • LinkedIn
+PROFESSIONAL SUMMARY
+Second-year B.Tech student in Systems Engineering with strong foundations in Data Structures, Operating Systems, Computer Networks, and Digital Electronics. Experienced in developing IoT-based systems using Arduino and ESP8266 with cloud integration. Skilled in VLSI design, embedded systems programming, and real-time sensor-based applications. Passionate about building practical solutions combining hardware and software engineering.
+TECHNICAL SKILLS
+Programming Languages: C, C++, Python, JavaScript (basic)
+Core Computer Science: Data Structures & Algorithms, Operating Systems, Computer Networks, Database Basics
+Electronics & Hardware: Digital Circuits, Analog Electronics, Signals & Systems, CMOS & VLSI Design
+IoT & Embedded Systems: Arduino, ESP8266, Raspberry Pi, Sensors (MPU6050, BME280, Ultrasonic, Gas Sensors)
+Communication Protocols: I2C, SPI, MQTT, HTTP, TCP/IP
+Tools & Platforms: LTSpice, MATLAB, Xilinx ISE, ThingSpeak, Blynk, Git, VS Code
+Additional Skills: Verilog, VHDL, FPGA Design, Cloud Integration, Data Analysis (R, Python)
+EDUCATION
+B.Tech in Systems Engineering | JK Lakshmipat University, Jaipur  2024 – 2028 (Expected)
+Relevant Coursework: Programming I & II, Data Structures & Algorithms, Operating Systems, Computer Networks, Digital Circuits & Systems, Analog Electronics, Signals & Systems, Digital Signal Processing, Machine Learning, Probability & Statistics, Linear Algebra, Computer Organization & Architecture, Electromagnetism & Quantum Mechanics
+PROJECTS
+Smart Helmet Tilt & Impact Monitoring System (IoT Safety)
+•	Developed an advanced IoT-based safety system using Arduino and MPU6050 (6-axis accelerometer + gyroscope) for real-time helmet tilt and impact detection
+•	Implemented real-time tilt angle calculation and anomaly detection algorithm for unsafe riding conditions
+•	Integrated ESP8266 for cloud-based monitoring using ThingSpeak platform with live analytics and visualization
+•	Built Python-based backend for automated data logging and Telegram alert notifications on detected anomalies
+•	Designed complete system architecture: sensor data acquisition → microcontroller processing → cloud analytics → alert system
+
+BER Performance Analysis of QAM Modulation (Digital Communication)
+•	Performed in-depth analysis of Bit Error Rate (BER) performance for 16-QAM, 64-QAM, and 256-QAM under AWGN channel conditions
+•	Implemented theoretical and simulated BER calculations in MATLAB with comprehensive comparison
+•	Analyzed trade-offs between spectral efficiency and noise sensitivity in high-order modulation schemes
+•	Generated BER vs SNR graphs demonstrating system performance across different modulation schemes
+•	Demonstrated understanding of real-world wireless communication system design principles
+
+VLSI Circuit Design Suite (CMOS Optimization Projects)
+•	Designed and analyzed multiple CMOS circuits: Inverter, Full Adder, Differential Amplifier, and Current Mirror using LTSpice
+•	Performed comprehensive analysis including VTC (Voltage Transfer Characteristics), propagation delay, rise/fall times, and power consumption
+•	Compared circuit performance across multiple technology nodes (180nm, 90nm, 45nm) and optimized transistor sizing
+•	Calculated noise margins, switching behavior, and evaluated channel length modulation (λ) effects on performance
+
+Embedded Automation System using Raspberry Pi (Sensor + Actuator Control)
+•	Developed embedded automation system interfacing HC-SR04 ultrasonic sensor with Raspberry Pi for real-time distance measurement
+•	Implemented PWM-based servo motor control for automated motion based on object distance detection
+•	Built automated response system using Python GPIO programming for real-time hardware interaction
+•	Demonstrated practical embedded systems design combining sensors, microcontroller, and actuators
+
+Digital System Design using Verilog & VHDL (Hardware Description Languages)
+•	Designed and implemented 4-bit ALU with 16 operations (arithmetic, logical, and shift operations) using Verilog HDL
+•	Implemented multiple digital circuits including logic gates, multiplexers, flip-flops using structural and behavioral modeling
+•	Created and verified designs using testbenches and waveform analysis in Xilinx ISE
+•	Demonstrated hardware-level programming and digital design fundamentals
+
+Environmental Data Monitoring System (IoT Cloud Integration)
+•	Built IoT environmental monitoring system using BME280 sensor to collect temperature, humidity, and pressure data
+•	Transmitted real-time sensor data to ThingSpeak cloud platform using ESP8266 WiFi module
+•	Implemented cloud-based data visualization and analysis dashboard for remote monitoring
+•	Demonstrated end-to-end IoT system design from hardware to cloud integration
+
+Data Analysis using R (Exploratory Data Analysis)
+•	Performed exploratory data analysis (EDA) on large-scale flight dataset using R and dplyr library
+•	Applied filtering, grouping, and aggregation operations to analyze delays and trends across airlines
+•	Calculated statistical measures, frequency distributions, and visualized real-world dataset insights
+•	Demonstrated data handling, analytical thinking, and interpretation of complex datasets
+
+ACHIEVEMENTS & ACTIVITIES
+•	Completed multiple IoT-based hardware projects with cloud integration
+•	Strong foundation in VLSI design and analog/digital circuit analysis
+•	Experience with cross-domain technologies: embedded systems, VLSI, software, and data analysis
+•	Proficient in hardware description languages (Verilog/VHDL) and embedded system design
+•	Continuous learner with hands-on experience in modern technologies
