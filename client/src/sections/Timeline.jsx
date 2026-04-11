@@ -6,7 +6,7 @@ const ITEMS = [
     type: 'education',
     title: 'B.Tech in Systems Engineering',
     org: 'JK Lakshmipat University, Jaipur',
-    period: '2024 – 2028 (Expected)',
+    period: '2023 – 2027 (Expected)',
     color: 'var(--primary)',
     details: [
       'Programming I & II, Data Structures & Algorithms',

@@ -11,10 +11,10 @@ const CERTS = [
     link: '#',
   },
   {
-    title: 'VLSI Design & LTSpice Simulation',
-    issuer: 'JKLU Internal',
+    title: '5G Use Case Lab Training',
+    issuer: 'AICTE ATAL Academy',
     year: '2024',
-    tag: 'VLSI',
+    tag: '5G / IoT',
     color: 'var(--secondary)',
     link: '#',
   },
@@ -27,11 +27,11 @@ const CERTS = [
     link: '#',
   },
   {
-    title: 'Embedded Systems Programming',
-    issuer: 'NPTEL',
+    title: 'Red Hat System Administration I (RH124)',
+    issuer: 'Red Hat Academy',
     year: '2025',
-    tag: 'Embedded',
-    color: 'var(--secondary)',
+    tag: 'Linux / Admin',
+    color: 'var(--error)',
     link: '#',
   },
 ];
@@ -39,8 +39,7 @@ const CERTS = [
 const ACHIEVEMENTS = [
   'Completed 7+ IoT hardware projects with cloud integration',
   'VLSI design across 180nm–45nm technology nodes',
-  'Cross-domain expertise: embedded systems + VLSI + software + data analysis',
-  'Proficient in hardware description languages (Verilog/VHDL)',
+  'Proficient in Verilog/VHDL hardware description languages',
   'Real-time DSP and wireless communication system analysis',
 ];
 
@@ -86,6 +85,7 @@ export default function Certs() {
 
           <motion.div
             className="certs__achievements card"
+            style={{ height: '100%' }}
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}

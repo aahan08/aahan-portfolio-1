@@ -24,6 +24,7 @@ export default function About() {
         <div className="about__grid">
           <motion.div
             className="about__photo-col"
+            style={{ height: '100%' }}
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -43,20 +44,19 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.1 }}
           >
             <p className="about__bio">
-              Second-year B.Tech student in Systems Engineering at JK Lakshmipat University, Jaipur. I work at the intersection of hardware and software — designing IoT systems, VLSI circuits, and embedded automation that solve real problems.
+              B.Tech student in Communication and Computer Engineering at JK Lakshmipat University, Rajasthan. I work at the intersection of hardware and software — designing real-world IoT systems, VLSI circuits, and embedded automation solutions that solve practical problems. Passionate about building intelligent systems that bridge the gap between silicon and software.
             </p>
             <p className="about__bio">
-              My foundation spans Data Structures, Operating Systems, Computer Networks, and Digital Electronics. I've built IoT safety systems with cloud analytics, analyzed BER performance in wireless communication, and designed CMOS circuits from 180nm to 45nm nodes.
+              My technical foundation spans Data Structures, Operating Systems, Computer Networks, and Digital Electronics. I've architected IoT safety systems with cloud analytics on ThingSpeak, analyzed BER performance in wireless communication, designed CMOS circuits across 180nm to 45nm technology nodes using LTSpice, and implemented embedded systems using Arduino, ESP8266, and Raspberry Pi with real-time sensor integration.
             </p>
             <p className="about__bio">
-              Driven by the belief that the best engineers understand both the silicon and the software above it.
+              Cross-domain engineer with hands-on expertise in IoT platforms, VLSI design, embedded programming (Python, C++, Verilog/VHDL), and data analysis. I believe the best systems engineers understand both the silicon below and the software above it — constantly learning, experimenting, and building solutions that matter.
             </p>
 
             <div className="about__chips">
               <span className="chip"><span className="dot" />LOCATION: JAIPUR, RJ</span>
-              <span className="chip"><span className="dot" />LEVEL: 2ND YEAR B.TECH</span>
               <span className="chip"><span className="dot amber" />STATUS: OPEN TO WORK</span>
-              <span className="chip"><span className="dot" />BRANCH: SYSTEMS ENG.</span>
+              <span className="chip"><span className="dot" />BRANCH: ECE</span>
             </div>
 
             <div className="about__meta">
