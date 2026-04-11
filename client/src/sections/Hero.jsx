@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import './Hero.css';
+import aahanImg from '../assets/aahan.jpg';
 
 const ROLES = [
   'Communication & Computer Engineer',
@@ -86,7 +87,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.2 }}
         >
           <div className="hero__img-wrap">
-            <img src="/src/assets/aahan.jpg" alt="Aahan Bansal" className="hero__img" />
+            <img src={aahanImg} alt="Aahan Bansal" className="hero__img" />
             <div className="hero__img-overlay" />
           </div>
           <div className="hero__stat-badge hero__stat-badge--tl">

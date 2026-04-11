@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import './About.css';
+import aahanImg from '../assets/aahan.jpg';
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -31,7 +32,7 @@ export default function About() {
             transition={{ duration: 0.6 }}
           >
             <div className="about__photo-wrap card">
-              <img src="/src/assets/aahan.jpg" alt="Aahan Bansal" />
+              <img src={aahanImg} alt="Aahan Bansal" />
               <div className="about__photo-tag mono">aahan_bansal.sys</div>
             </div>
           </motion.div>
