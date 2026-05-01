@@ -3,12 +3,12 @@ import './Certs.css';
 
 const CERTS = [
   {
-    title: 'IoT Fundamentals & Cloud Integration',
+    title: 'C for Everyone',
     issuer: 'Coursera / NPTEL',
     year: '2024',
     tag: 'IoT',
     color: 'var(--primary)',
-    link: '#',
+    link: 'https://coursera.org/share/5e1d5118075ee772635d43bedb7eb5a8',
   },
   {
     title: '5G Use Case Lab Training',
@@ -16,15 +16,15 @@ const CERTS = [
     year: '2024',
     tag: '5G / IoT',
     color: 'var(--secondary)',
-    link: '#',
+    link: 'https://1drv.ms/b/c/559fe13973b7c2bc/IQAFNtIkiNFpT4gvgUwNJgLvAef0L9wGWRnH1NL5ytN1iis?e=yHWfMU',
   },
   {
-    title: 'Data Structures & Algorithms',
+    title: 'Python',
     issuer: 'Coursera',
     year: '2024',
     tag: 'CS Core',
     color: 'var(--primary)',
-    link: '#',
+    link: 'https://coursera.org/share/790765ac5eb82d7a80fad4d386b3361b',
   },
   {
     title: 'Red Hat System Administration I (RH124)',
@@ -32,7 +32,7 @@ const CERTS = [
     year: '2025',
     tag: 'Linux / Admin',
     color: 'var(--error)',
-    link: '#',
+    link: 'https://1drv.ms/b/c/559fe13973b7c2bc/IQAHcAVMemheRYUTfodr7mAHAV5N0dUAD2CSZpLCWNkmpV8?e=vxFJVp',
   },
 ];
 
